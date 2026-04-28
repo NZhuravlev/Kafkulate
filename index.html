@@ -29,7 +29,7 @@
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 20px;
       padding: 48px 40px;
-      max-width: 420px;
+      max-width: 520px;
       width: 100%;
     }
 
@@ -91,28 +91,6 @@
       opacity: 1;
     }
 
-    button {
-      width: 100%;
-      padding: 14px;
-      background: var(--accent, #ffffff);
-      border: none;
-      border-radius: 10px;
-      color: #fff;
-      font-size: 1rem;
-      font-weight: 600;
-      font-family: inherit;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.1s;
-      margin-top: 8px;
-    }
-
-    button:hover {
-      filter: brightness(0.85);
-    }
-
-    button:active {
-      transform: scale(0.98);
-    }
 
     .result {
       margin-top: 32px;
@@ -193,8 +171,6 @@
       <input type="number" id="partitions" value="30" min="1">
     </div>
 
-    <button id="calculate">Calculate Partition</button>
-
     <div id="result" class="result hidden">
       <div class="partition-number">
         <span class="label">Partition</span>
@@ -274,7 +250,6 @@
 
     const keyInput = document.getElementById('key');
     const partitionsInput = document.getElementById('partitions');
-    const calculateBtn = document.getElementById('calculate');
     const resultDiv = document.getElementById('result');
     const errorDiv = document.getElementById('error');
     const partitionValue = document.getElementById('partition-value');
@@ -335,7 +310,6 @@
 
     keyInput.addEventListener('input', calculate);
     partitionsInput.addEventListener('input', calculate);
-    calculateBtn.addEventListener('click', calculate);
   </script>
 </body>
 </html>
